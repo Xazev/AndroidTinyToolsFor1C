@@ -211,7 +211,7 @@ public class BluetoothBarcodeScannerHandlerClass {
                     // Read from the InputStream
                     bytes = inStream.read(buffer);        // Получаем кол-во байт и само собщение в байтовый массив "buffer"
                     // преобразуем их в строку
-                    String strIncom = new String(buffer, 0, bytes, StandardCharsets.US_ASCII);
+                    String strIncom = new String(buffer, 0, bytes, StandardCharsets.UTF_8);
                     OnBarcode(mV8Object, strIncom);
                 } catch (IOException e) {
                     cancel();
